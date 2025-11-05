@@ -1,0 +1,23 @@
+{
+  "overall": {
+    "num_customers": 50000,
+    "avg_churn_proba": 0.4985246227214157,
+    "share_high": 0.18906,
+    "share_medium": 0.63306,
+    "share_low": 0.17788
+  },
+  "ab_10": {
+    "control_rate": 0.50126,
+    "treated_rate": 0.48152,
+    "absolute_reduction": 0.019740000000000035,
+    "relative_reduction": 0.03938076048358144,
+    "treated_share": 0.18906
+  },
+  "ab_20": {
+    "control_rate": 0.50126,
+    "treated_rate": 0.46772,
+    "absolute_reduction": 0.033540000000000014,
+    "relative_reduction": 0.06691138331404863,
+    "treated_share": 0.18906
+  }
+}

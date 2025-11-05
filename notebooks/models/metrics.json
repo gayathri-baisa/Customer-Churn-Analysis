@@ -1,0 +1,182 @@
+{
+  "metrics": {
+    "logit": {
+      "accuracy": 0.639,
+      "roc_auc": 0.6913659676367756
+    },
+    "rf": {
+      "accuracy": 0.6247,
+      "roc_auc": 0.6705866823438449
+    }
+  },
+  "drivers": {
+    "logit": {
+      "top_coefficients": [
+        {
+          "feature": "monthly_charges",
+          "coefficient": -0.738584072513479
+        },
+        {
+          "feature": "contract_type_Month-to-month",
+          "coefficient": 0.06429793828847198
+        },
+        {
+          "feature": "contract_type_One year",
+          "coefficient": -0.04921422623721174
+        },
+        {
+          "feature": "payment_method_Electronic check",
+          "coefficient": -0.04417529568966202
+        },
+        {
+          "feature": "total_charges",
+          "coefficient": 0.04299528008335412
+        },
+        {
+          "feature": "tenure_months",
+          "coefficient": -0.04140645421483854
+        },
+        {
+          "feature": "contract_type_Two year",
+          "coefficient": -0.041376372551362714
+        },
+        {
+          "feature": "avg_monthly_spend",
+          "coefficient": -0.03702843632507051
+        },
+        {
+          "feature": "internet_service_None",
+          "coefficient": -0.031401777696320576
+        },
+        {
+          "feature": "internet_service_Fiber optic",
+          "coefficient": 0.02545307431663464
+        },
+        {
+          "feature": "is_auto_pay",
+          "coefficient": -0.023843389277746024
+        },
+        {
+          "feature": "internet_service_DSL",
+          "coefficient": -0.02034395712041689
+        },
+        {
+          "feature": "has_partner",
+          "coefficient": 0.01213547259414929
+        },
+        {
+          "feature": "support_calls_rate",
+          "coefficient": -0.012129951628499449
+        },
+        {
+          "feature": "payment_method_Credit card",
+          "coefficient": 0.011996144262914872
+        },
+        {
+          "feature": "has_dependents",
+          "coefficient": -0.011366152646751069
+        },
+        {
+          "feature": "payment_method_Mailed check",
+          "coefficient": 0.010518106217251981
+        },
+        {
+          "feature": "is_senior_citizen",
+          "coefficient": 0.008052976858059077
+        },
+        {
+          "feature": "payment_method_Bank transfer",
+          "coefficient": -0.004631615290607665
+        },
+        {
+          "feature": "is_paperless",
+          "coefficient": -0.0009982408709878837
+        }
+      ]
+    },
+    "rf": {
+      "top_importances": [
+        {
+          "feature": "monthly_charges",
+          "importance": 0.22381914195184327
+        },
+        {
+          "feature": "avg_monthly_spend",
+          "importance": 0.2014903768514206
+        },
+        {
+          "feature": "total_charges",
+          "importance": 0.15475282792244957
+        },
+        {
+          "feature": "tenure_months",
+          "importance": 0.1088787022478594
+        },
+        {
+          "feature": "support_calls_rate",
+          "importance": 0.10685163783394605
+        },
+        {
+          "feature": "has_partner",
+          "importance": 0.02150743901209834
+        },
+        {
+          "feature": "is_paperless",
+          "importance": 0.020537979150815493
+        },
+        {
+          "feature": "is_auto_pay",
+          "importance": 0.02011299732138969
+        },
+        {
+          "feature": "has_dependents",
+          "importance": 0.018595237363850922
+        },
+        {
+          "feature": "is_senior_citizen",
+          "importance": 0.013943810594120084
+        },
+        {
+          "feature": "payment_method_Mailed check",
+          "importance": 0.013030378276570671
+        },
+        {
+          "feature": "payment_method_Bank transfer",
+          "importance": 0.013024925018254273
+        },
+        {
+          "feature": "internet_service_Fiber optic",
+          "importance": 0.012976139188813966
+        },
+        {
+          "feature": "internet_service_DSL",
+          "importance": 0.012746023526978206
+        },
+        {
+          "feature": "payment_method_Credit card",
+          "importance": 0.012691290584585877
+        },
+        {
+          "feature": "payment_method_Electronic check",
+          "importance": 0.012340324888043952
+        },
+        {
+          "feature": "contract_type_Month-to-month",
+          "importance": 0.009494110340227969
+        },
+        {
+          "feature": "contract_type_One year",
+          "importance": 0.00861114584239354
+        },
+        {
+          "feature": "contract_type_Two year",
+          "importance": 0.007428571075356657
+        },
+        {
+          "feature": "internet_service_None",
+          "importance": 0.007166941008981422
+        }
+      ]
+    }
+  }
+}

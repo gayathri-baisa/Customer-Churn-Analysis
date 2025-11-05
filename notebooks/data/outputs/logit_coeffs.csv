@@ -1,0 +1,21 @@
+feature,coefficient
+monthly_charges,-0.738584072513479
+contract_type_Month-to-month,0.06429793828847198
+contract_type_One year,-0.04921422623721174
+payment_method_Electronic check,-0.04417529568966202
+total_charges,0.04299528008335412
+tenure_months,-0.04140645421483854
+contract_type_Two year,-0.041376372551362714
+avg_monthly_spend,-0.03702843632507051
+internet_service_None,-0.031401777696320576
+internet_service_Fiber optic,0.02545307431663464
+is_auto_pay,-0.023843389277746024
+internet_service_DSL,-0.02034395712041689
+has_partner,0.01213547259414929
+support_calls_rate,-0.012129951628499449
+payment_method_Credit card,0.011996144262914872
+has_dependents,-0.011366152646751069
+payment_method_Mailed check,0.010518106217251981
+is_senior_citizen,0.008052976858059077
+payment_method_Bank transfer,-0.004631615290607665
+is_paperless,-0.0009982408709878837

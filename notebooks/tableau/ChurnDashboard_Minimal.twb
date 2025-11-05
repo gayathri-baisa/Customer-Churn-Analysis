@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<workbook xmlns:user="http://www.tableausoftware.com/xml/user" version="20251.24" xml:lang="en-US" app="tableau">
+  <active-sheet name="Dashboard" />
+  <datasources>
+    <datasource name="churn_scores" version="18.1" inline="true">
+      <connection class="textscan" dbname="C:\Users\baisa\OneDrive\Desktop\Customer_Churn_Prediction\data\outputs\churn_scores.csv" connector-plugin-id="textscan" />
+    </datasource>
+    <datasource name="logit_coeffs" version="18.1" inline="true">
+      <connection class="textscan" dbname="C:\Users\baisa\OneDrive\Desktop\Customer_Churn_Prediction\data\outputs\logit_coeffs.csv" connector-plugin-id="textscan" />
+    </datasource>
+    <datasource name="rf_importances" version="18.1" inline="true">
+      <connection class="textscan" dbname="C:\Users\baisa\OneDrive\Desktop\Customer_Churn_Prediction\data\outputs\rf_importances.csv" connector-plugin-id="textscan" />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name="Scores by Segment">
+      <table>
+        <view>
+          <datasource name="churn_scores" />
+        </view>
+      </table>
+    </worksheet>
+    <worksheet name="Logistic Coeffs">
+      <table>
+        <view>
+          <datasource name="logit_coeffs" />
+        </view>
+      </table>
+    </worksheet>
+    <worksheet name="RF Importances">
+      <table>
+        <view>
+          <datasource name="rf_importances" />
+        </view>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="Dashboard">
+      <zones>
+        <zone type="tab-zone" name="Scores by Segment" source="Scores by Segment" />
+        <zone type="tab-zone" name="Logistic Coeffs" source="Logistic Coeffs" />
+        <zone type="tab-zone" name="RF Importances" source="RF Importances" />
+      </zones>
+    </dashboard>
+  </dashboards>
+</workbook>
+
+

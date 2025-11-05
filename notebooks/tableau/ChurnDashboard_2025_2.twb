@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<workbook xmlns:user="http://www.tableausoftware.com/xml/user" version="20251.24.0724.1102" xml:lang="en-US" source-build="20251.24.0724.1102" app="tableau" server="">
+  <document-format-change-tracker />
+  <active-sheet name="Dashboard" />
+  <datasources>
+    <datasource name="churn_scores" version="18.1" inline="true">
+      <connection class="textscan" dbname="C:\Users\baisa\OneDrive\Desktop\Customer_Churn_Prediction\data\outputs\churn_scores.csv" connector-plugin-id="textscan" />
+      <metadata-records>
+        <metadata-record class="column">
+          <remote-name>customer_id</remote-name>
+          <local-name>[customer_id]</local-name>
+          <remote-type>string</remote-type>
+          <semantic-role>nominal</semantic-role>
+        </metadata-record>
+        <metadata-record class="column">
+          <remote-name>churn_proba</remote-name>
+          <local-name>[churn_proba]</local-name>
+          <remote-type>real</remote-type>
+          <semantic-role>measure</semantic-role>
+        </metadata-record>
+        <metadata-record class="column">
+          <remote-name>churn_label</remote-name>
+          <local-name>[churn_label]</local-name>
+          <remote-type>integer</remote-type>
+          <semantic-role>measure</semantic-role>
+        </metadata-record>
+        <metadata-record class="column">
+          <remote-name>segment</remote-name>
+          <local-name>[segment]</local-name>
+          <remote-type>string</remote-type>
+          <semantic-role>nominal</semantic-role>
+        </metadata-record>
+      </metadata-records>
+    </datasource>
+    <datasource name="logit_coeffs" version="18.1" inline="true">
+      <connection class="textscan" dbname="C:\Users\baisa\OneDrive\Desktop\Customer_Churn_Prediction\data\outputs\logit_coeffs.csv" connector-plugin-id="textscan" />
+    </datasource>
+    <datasource name="rf_importances" version="18.1" inline="true">
+      <connection class="textscan" dbname="C:\Users\baisa\OneDrive\Desktop\Customer_Churn_Prediction\data\outputs\rf_importances.csv" connector-plugin-id="textscan" />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name="Scores by Segment">
+      <table>
+        <rows>
+          <view>
+            <datasource name="churn_scores" />
+            <simple-encoding>
+              <columns>
+                <column type="quantitative" name="[churn_proba]" aggregation="avg" role="measure" />
+              </columns>
+              <rows>
+                <row>
+                  <field name="[segment]" role="dimension" />
+                </row>
+              </rows>
+            </simple-encoding>
+          </view>
+        </rows>
+      </table>
+    </worksheet>
+    <worksheet name="Top Logistic Coefficients">
+      <table>
+        <rows>
+          <view>
+            <datasource name="logit_coeffs" />
+            <simple-encoding>
+              <columns>
+                <column type="quantitative" name="[coefficient]" role="measure" />
+              </columns>
+              <rows>
+                <row>
+                  <field name="[feature]" role="dimension" />
+                </row>
+              </rows>
+            </simple-encoding>
+          </view>
+        </rows>
+      </table>
+    </worksheet>
+    <worksheet name="Top RF Importances">
+      <table>
+        <rows>
+          <view>
+            <datasource name="rf_importances" />
+            <simple-encoding>
+              <columns>
+                <column type="quantitative" name="[importance]" role="measure" />
+              </columns>
+              <rows>
+                <row>
+                  <field name="[feature]" role="dimension" />
+                </row>
+              </rows>
+            </simple-encoding>
+          </view>
+        </rows>
+      </table>
+    </worksheet>
+    <worksheet name="Customer Detail">
+      <table>
+        <rows>
+          <view>
+            <datasource name="churn_scores" />
+          </view>
+        </rows>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name="Dashboard">
+      <zones>
+        <zone type="tab-zone" name="Scores by Segment" source="Scores by Segment" />
+        <zone type="tab-zone" name="Top Logistic Coefficients" source="Top Logistic Coefficients" />
+        <zone type="tab-zone" name="Top RF Importances" source="Top RF Importances" />
+        <zone type="tab-zone" name="Customer Detail" source="Customer Detail" />
+      </zones>
+    </dashboard>
+  </dashboards>
+</workbook>
+
+

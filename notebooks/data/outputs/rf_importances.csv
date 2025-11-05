@@ -1,0 +1,21 @@
+feature,importance
+monthly_charges,0.22381914195184327
+avg_monthly_spend,0.2014903768514206
+total_charges,0.15475282792244957
+tenure_months,0.1088787022478594
+support_calls_rate,0.10685163783394605
+has_partner,0.02150743901209834
+is_paperless,0.020537979150815493
+is_auto_pay,0.02011299732138969
+has_dependents,0.018595237363850922
+is_senior_citizen,0.013943810594120084
+payment_method_Mailed check,0.013030378276570671
+payment_method_Bank transfer,0.013024925018254273
+internet_service_Fiber optic,0.012976139188813966
+internet_service_DSL,0.012746023526978206
+payment_method_Credit card,0.012691290584585877
+payment_method_Electronic check,0.012340324888043952
+contract_type_Month-to-month,0.009494110340227969
+contract_type_One year,0.00861114584239354
+contract_type_Two year,0.007428571075356657
+internet_service_None,0.007166941008981422
